@@ -35,12 +35,17 @@ else{
   else{
     lastName.style.border = "1px solid green";
   }
-  if (dob.value < 2) {
+  const dateOfBirth = new Date(dob.value);
+
+  const ageInYears = (Date.now() - dateOfBirth.getTime()) / (1000 * 60 * 60 * 24 * 365);
+  if (ageInYears < 18) {
     dob.style.border = "1px solid red";
 
     return false;
-  } else {
+  }
+  else {
     dob.style.border = "1px solid green";
+
   }
   if (gender.value == "") {
     gender.style.border = "1px solid red";
