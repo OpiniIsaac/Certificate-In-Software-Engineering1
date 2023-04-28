@@ -7,7 +7,7 @@ const mongoose= require("mongoose");
 const bodyParser= require("body-parser");
 const config = require("./config/database");
 
-
+const registerRoute = require('./routes/registerRoute')
 
 
 
@@ -38,7 +38,7 @@ app.set("views", path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 
-
+app.use('/',registerRoute)
 
 
 

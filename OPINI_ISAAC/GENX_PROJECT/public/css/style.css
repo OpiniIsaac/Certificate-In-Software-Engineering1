@@ -1,0 +1,10 @@
+form{
+    color: gray;
+}
+legend{
+    font-weight: bold;
+    border-bottom: 3px solid grey;
+}
+input ,select{ 
+    border: 2px solid grey;
+}
