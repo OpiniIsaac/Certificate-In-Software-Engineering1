@@ -10,20 +10,32 @@ const Validate = () => {
   const phoneNumber1 = document.getElementById("phoneNumber1");
   const phoneNumber2 = document.getElementById("phoneNumber2");
   const email = document.getElementById("email");
-  if (firstName.value == "") {
+  if (firstName.value > 2) {
     firstName.style.border = "1px solid red";
  return false;
-  } else {
-    firstName.style.border = "1px solid green";
+  } else if (firstName.value < 255){
+    firstName.style.border = "1px solid red";
+    return false;
+
   }
-  if (lastName.value == "") {
+else{
+    firstName.style.border = "1px solid green";
+
+}
+
+  if (lastName.value == 2) {
     lastName.style.border = "1px solid red";
 
     return false;
-  } else {
+  } else if (firstName > 255){
+    lastName.style.border = "1px solid green";
+    return false;
+
+  }
+  else{
     lastName.style.border = "1px solid green";
   }
-  if (dob.value == "") {
+  if (dob.value < 2) {
     dob.style.border = "1px solid red";
 
     return false;
@@ -37,46 +49,80 @@ const Validate = () => {
   } else {
     gender.style.border = "1px solid green";
   }
-  if (country.value == "") {
+  if (country.value < 2) {
     country.style.border = "1px solid red";
 
     return false;
-  } else {
+  } else if (country.value > 255) {
+    country.style.border = "1px solid red";
+    return false;
+
+  }
+ else {
     country.style.border = "1px solid green";
   }
-  if (state.value == "") {
+  if (state.value < 2) {
     state.style.border = "1px solid red";
 
     return false;
-  } else {
-    state.style.border = "1px solid green";
+  } else if(state.value > 255) {
+    state.style.border = "1px solid red";
+    return false
   }
-  if (zipCode.value == "") {
+  else{
+    state.style.border = "1px solid green";
+
+  }
+  if (zipCode.value <2) {
     zipCode.style.border = "1px solid red";
 
     return false;
-  } else {
-    zipCode.style.border = "1px solid green";
+  } else if (zipCode > 255) {
+    zipCode.style.border = "1px solid red";
+    return false;
+
   }
-  if (phoneNumber1.value == "") {
+  else
+  {
+    zipCode.style.border = "1px solid green";
+
+  }
+  if (phoneNumber1.value < 2) {
     phoneNumber1.style.border = "1px solid red";
 
     return false;
-  } else {
-    phoneNumber1.style.border = "1px solid green";
+  } else  if (phoneNumber1 < 255){
+    phoneNumber1.style.border = "1px solid red";
+    return false;
+
   }
-  if (phoneNumber2.value == "") {
+  else{
+    phoneNumber1.style.border = "1px solid green";
+
+  }
+  if (phoneNumber2.value < 2) {
     phoneNumber2.style.border = "1px solid red";
 
     return false;
-  } else {
-    phoneNumber2.style.border = "1px solid green";
+  } else if (phoneNumber2 > 255) {
+    phoneNumber2.style.border = "1px solid red";
+    return false;
+
+  } else{
+    phoneNumber2.style.border = "1px solid red";
+
   }
-  if (email.value == "") {
+  if (email.value < 2) {
     email.style.border = "1px solid red";
 
     return false;
-  } else {
+  } else  if (email.value > 255){
+    email.style.border = "1px solid red";
+    return false;
+
+  }
+  else{
     email.style.border = "1px solid green";
+
   }
 };
