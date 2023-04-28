@@ -51,4 +51,32 @@ const Validate = () => {
   } else {
     state.style.border = "1px solid green";
   }
+  if (zipCode.value == "") {
+    zipCode.style.border = "1px solid red";
+
+    return false;
+  } else {
+    zipCode.style.border = "1px solid green";
+  }
+  if (phoneNumber1.value == "") {
+    phoneNumber1.style.border = "1px solid red";
+
+    return false;
+  } else {
+    phoneNumber1.style.border = "1px solid green";
+  }
+  if (phoneNumber2.value == "") {
+    phoneNumber2.style.border = "1px solid red";
+
+    return false;
+  } else {
+    phoneNumber2.style.border = "1px solid green";
+  }
+  if (email.value == "") {
+    email.style.border = "1px solid red";
+
+    return false;
+  } else {
+    email.style.border = "1px solid green";
+  }
 };
