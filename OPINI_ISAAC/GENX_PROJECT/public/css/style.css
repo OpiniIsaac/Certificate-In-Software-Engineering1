@@ -8,3 +8,8 @@ legend{
 input ,select{ 
     border: 2px solid grey;
 }
+button{
+    color: white;
+    background-color: orange;
+    border: 0;
+}
