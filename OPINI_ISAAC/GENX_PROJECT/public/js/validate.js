@@ -23,7 +23,7 @@ else{
 
 }
 
-  if (lastName.value == 2) {
+  if (lastName.value < 2) {
     lastName.style.border = "1px solid red";
 
     return false;
